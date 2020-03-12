@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/NCPreacher/Mapa_topograficzna/blob/master/screens/1.png)
 
-Maly projekt realizowany w ramach kursu OpenGL, ktorego celem bylo stworzenie mapy topograficznej na podstawie dostępnych map wysokości DTED pochodzących z misji promu kosmicznego Endeavour z 2000 roku.
+Maly projekt realizowany w ramach kursu OpenGL, ktorego celem bylo stworzenie mapy topograficznej na podstawie dostępnych map wysokości DTED, pochodzących z misji promu kosmicznego Endeavour z 2000 roku.
 
 # Dodawanie danych
 

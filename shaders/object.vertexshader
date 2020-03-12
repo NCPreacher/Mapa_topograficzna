@@ -1,0 +1,56 @@
+#version 330 core
+
+layout(location = 0) in vec3 vertexPosition_modelspace;
+
+out vec3 fragmentColor;
+
+uniform mat4 projection;
+uniform mat4 model;
+uniform mat4 view;
+
+void main()
+{
+	float height = vertexPosition_modelspace.z;
+
+	if( height > 0.130 ) 		fragmentColor = vec3(1.00, 0.00, 1.0);
+
+	else if( height > 0.125 ) 	fragmentColor = vec3(1.00, 0.00, 0.90);
+	else if( height > 0.120 ) 	fragmentColor = vec3(1.00, 0.00, 0.80);
+	else if( height > 0.115 ) 	fragmentColor = vec3(1.00, 0.00, 0.70);
+	else if( height > 0.130 ) 	fragmentColor = vec3(1.00, 0.00, 0.60);
+	else if( height > 0.125 ) 	fragmentColor = vec3(1.00, 0.00, 0.50);
+	else if( height > 0.120 ) 	fragmentColor = vec3(1.00, 0.00, 0.40);
+	else if( height > 0.115 ) 	fragmentColor = vec3(1.00, 0.00, 0.30);
+	else if( height > 0.110 ) 	fragmentColor = vec3(1.00, 0.00, 0.20);
+	else if( height > 0.105 ) 	fragmentColor = vec3(1.00, 0.00, 0.10);
+	else if( height > 0.100 ) 	fragmentColor = vec3(1.00, 0.00, 0.00);
+	else if( height > 0.095 ) 	fragmentColor = vec3(1.00, 0.10, 0.00);
+	else if( height > 0.090 ) 	fragmentColor = vec3(1.00, 0.20, 0.00);
+	else if( height > 0.085 ) 	fragmentColor = vec3(1.00, 0.30, 0.00);
+	else if( height > 0.080 ) 	fragmentColor = vec3(1.00, 0.40, 0.00);
+	else if( height > 0.075 ) 	fragmentColor = vec3(1.00, 0.50, 0.00);
+	else if( height > 0.070 ) 	fragmentColor = vec3(1.00, 0.60, 0.00);
+	else if( height > 0.065 ) 	fragmentColor = vec3(1.00, 0.70, 0.00);
+	else if( height > 0.060 ) 	fragmentColor = vec3(1.00, 0.80, 0.00);
+	else if( height > 0.055 ) 	fragmentColor = vec3(1.00, 0.90, 0.00);
+	else if( height > 0.050 ) 	fragmentColor = vec3(1.00, 1.00, 0.00);
+	else if( height > 0.045 ) 	fragmentColor = vec3(0.90, 1.00, 0.00);
+	else if( height > 0.040 ) 	fragmentColor = vec3(0.80, 1.00, 0.00);
+	else if( height > 0.035 ) 	fragmentColor = vec3(0.70, 1.00, 0.00);
+	else if( height > 0.030 ) 	fragmentColor = vec3(0.60, 1.00, 0.00);
+	else if( height > 0.025 ) 	fragmentColor = vec3(0.50, 1.00, 0.00);
+	else if( height > 0.020 ) 	fragmentColor = vec3(0.40, 1.00, 0.00);
+	else if( height > 0.015 ) 	fragmentColor = vec3(0.30, 1.00, 0.00);
+	else if( height > 0.010 ) 	fragmentColor = vec3(0.20, 1.00, 0.00);
+	else if( height > 0.005 ) 	fragmentColor = vec3(0.10, 1.00, 0.00);
+	else if( height > 0.000 ) 	fragmentColor = vec3(0.00, 1.00, 0.00);
+	else if( height > -0.005 ) 	fragmentColor = vec3(0.00, 0.80, 0.00);
+	else if( height > -0.010 ) 	fragmentColor = vec3(0.00, 0.60, 0.00);
+	else if( height > -0.015 ) 	fragmentColor = vec3(0.00, 0.40, 0.00);
+	else if( height > -0.020 ) 	fragmentColor = vec3(0.00, 0.20, 0.00);
+
+	else 				fragmentColor = vec3(0, 0, 0);
+
+	mat4 MVP = projection * view * model;
+	gl_Position =  MVP * vec4( vertexPosition_modelspace, 1 );
+}

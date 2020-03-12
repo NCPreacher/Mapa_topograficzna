@@ -1,5 +1,7 @@
 # Mapa Topograficzna
 
+![alt text](https://github.com/NCPreacher/Mapa_topograficzna/blob/master/screens/1.png)
+
 Maly projekt realizowany w ramach kursu OpenGL, ktorego celem bylo stworzenie mapy topograficznej na podstawie dostępnych map wysokości DTED
 
 # Dodawanie danych
@@ -12,3 +14,6 @@ Nastepnie umiescic w folderze "data"
 Przemieszczanie sie po mapie: Klawisze strzalek, Q, E, Mysz  
 Zmiana pola widzenia: Srodkowy przycisk myszy  
 Zmiana poziomu detali: Klawisze 1, 2, 3, 4  
+
+![alt text](https://github.com/NCPreacher/Mapa_topograficzna/blob/master/screens/2.png)
+![alt text](https://github.com/NCPreacher/Mapa_topograficzna/blob/master/screens/3.png)
